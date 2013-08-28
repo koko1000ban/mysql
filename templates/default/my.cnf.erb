@@ -245,6 +245,9 @@ innodb_log_buffer_size  = <%= node['mysql']['tunable']['innodb_log_buffer_size']
 <%- if node['mysql']['tunable']['innodb_adaptive_flushing'] %>
 innodb_adaptive_flushing  = <%= node['mysql']['tunable']['innodb_adaptive_flushing'] %>
 <%- end %>
+innodb_file_format = Barracuda
+innodb_large_prefix
+
 
 <% if @skip_federated %>
 #
